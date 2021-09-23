@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Login</title>
+</head>
+<body>
+
+    <form class="col g-3 chat_entry_form" method="POST" action="check_room">
+        {% csrf_token %}
+        <div class="row-auto input_container">
+            <label for="staticEmail2" >Chat room:</label>
+            <input type="text" class="form-control input_" id="user_name" placeholder="Room" name="room_name">
+        </div>
+        <div class="row-auto input_container">
+            <label for="inputPassword2">Username:</label>
+            <input type="text" class="form-control input_" id="password" placeholder="Username" name="user_name">
+        </div>
+        <div class="col-auto btn_container">
+            <button type="submit" class="btn btn-primary mb-3 confirm_btn">iniciar</button>
+        </div>
+    </form>
+    
+</body>
+</html>
